@@ -1,0 +1,59 @@
+.Dashboard {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 50%;
+  height: 100%;
+
+
+  .Queues {
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+    
+    @media (max-width: 1200px) {
+      width: 300px;
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    margin-left: 200px;
+    margin-top: 50px;
+  }
+
+  & .Kitchen {
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  & .Delivery {
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .Alert {
+    position: absolute;
+    height: 10%;
+    right: 0;
+    left: 0%;
+    top: -50%;
+    z-index: 1000;
+    @media (max-height: 800px) {
+      top: -40%;
+      left: 35%;
+    }
+  }
+}
+
+.Line {
+  margin-left: 80px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-bottom: 50px;
+}

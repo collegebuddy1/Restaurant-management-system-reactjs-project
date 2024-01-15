@@ -1,0 +1,151 @@
+.Boxes {
+  display: flex;
+  justify-content: space-between;
+
+  .OrderSummary {
+    margin: auto;
+    width: 40%;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    .PriceNdish {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .TotalPrice {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .typesNtime {
+      text-align: left;
+
+      .Duration {
+        & p {
+          display: inline;
+        }
+      }
+
+      .CheckBox {
+        text-align: left;
+        margin-left: -40px;
+      }
+    }
+  }
+}
+
+.Dish {
+  display: flex;
+  justify-content: space-between;
+
+  & .Label {
+    p {
+      display: inline;
+    }
+  }
+
+  .DishTitle {
+    height: 10%;
+  }
+
+  .Cancel {
+    .CancelDish {
+      height: 10%;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .DishPrice {
+      height: 10%;
+      align-self: start;
+    }
+  }
+
+  .ToggleBox {
+    display: none;
+  }
+
+  .ToggleBox + label {
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    line-height: 21px;
+    margin-bottom: 5px;
+  }
+
+  .ToggleBox + label + .Ingredients {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  .ToggleBox:checked + label + .Ingredients {
+    display: block;
+  }
+
+  .ToggleBox + label:before {
+    background-color: #4f5150;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    content: "+";
+    display: block;
+    float: left;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    text-align: center;
+    width: 20px;
+  }
+
+  .ToggleBox:checked + label:before {
+    content: "\2212";
+  }
+
+  .Ingredients {
+    margin-top: 10%;
+
+    @media (max-height: 800px) {
+      margin-top: 20%;
+    }
+
+    .Ingredient {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      & p {
+        margin: 0;
+        text-align: center;
+
+        & img {
+          height: 10%;
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
+.Alert {
+  position: absolute;
+  height: 10%;
+  top: -3%;
+  left: -38%;
+
+  @media (max-height: 780px) {
+    top: 0%;
+    left: 33%;
+  }
+}
+
+.Button {
+  text-align: center;
+}

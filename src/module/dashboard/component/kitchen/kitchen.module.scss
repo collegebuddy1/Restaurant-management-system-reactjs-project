@@ -1,0 +1,53 @@
+.KitchenModule {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  align-content: flex-start;
+
+
+  & .Stand {
+    width: 45%;
+    color: white;
+    margin: 10px;
+    border: 1px solid white;
+  }
+
+  .DishHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  & .Ingredients {
+
+    & .Ingredient {
+      display: inline;
+
+      & img {
+        width: 10%;
+        margin: 8px;
+      }
+    }
+
+    & .ingAmount {
+      position: absolute;
+      font-size: .6rem;
+      margin-left: -13px;
+    }
+  }
+
+  & .Time {
+    text-align: start;
+    margin-left: 10px;
+
+    & div {
+      display: inline;
+    }
+
+    & p {
+      margin-right: 5px;
+      display: inline;
+    }
+  }
+}
